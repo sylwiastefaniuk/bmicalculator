@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+<div id="header">Kalkulator BMI</div>
+<div id="menu">
+    <a href="/search">Wyszukaj</a>
+</div>
+<form th:action="@{/index}" method="post">
+   <div>Wzrost:</div>
+    <input type="text" name="growthNewPerson" placeholder="Podaj swój wzrost"><br>
+    <div>Waga:</div>
+    <input type="text" name="weightNewPerson" placeholder="Podaj swoją wagę"><br>
+    <div>Płeć:</div><br>
+    <select name="gender">
+        <option></option>
+        <option>Mężczyzna</option>
+        <option>Kobieta</option>
+    </select>
+    <br><br>
+    <a href="/bmiResult"><input type="submit" value="Oblicz BMI"></a>
+</form>
+</body>
+</html>

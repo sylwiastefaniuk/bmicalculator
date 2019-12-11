@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="header">Wyniki wyszukiwania:</div>
+
+        <div class="wpis" th:each="newPerson: ${savedPersonInputs}">
+            <div th:text="'ID: ' + ${newPerson.id}"/>
+            <div th:text="'Wzrost: ' + ${newPerson.growth} + ' cm'"/>
+            <div th:text="'Waga: ' + ${newPerson.weight} + ' kg'"/>
+            <div th:text="'Płeć: ' + ${newPerson.gender}"/>
+            <div th:text="'BMI: ' + ${newPerson.bmi}"/>
+        </div>
+</body>
+</html>
